@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  scrollbar-color: #142e5a #775144;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: #cb904d;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+hr {
+  margin: 10px;
+  background-color: #516673;
+  color: #1a3749;
+}
+
+/* Main, Header e Footer */
+
+.conteudo {
+  background-color: #cb904d;
+  padding: 20px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 200px;
+  transition: 0.5s;
+  animation: textoDerrapando 1.5s ease forwards;
+}
+
+@keyframes textoDerrapando {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.conteudo a {
+  color: #0c1d68;
+  text-decoration: none;
+}
+
+.conteudo h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.conteudo h2 {
+  font-size: 30px;
+}
+
+.conteudo p {
+  font-size: 20px;
+}
+
+.conteudo li {
+  font-size: 20px;
+}
+
+.header {
+  background-image: url(./media/Sócrates.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header h1 {
+  font-size: 200px;
+  transition: 2s;
+}
+
+.header h2 {
+  font-size: 40px;
+  text-decoration: line-through;
+  color: #ffffff;
+  opacity: 1;
+  transition: 2s;
+}
+
+.header:hover > h1 {
+  opacity: 0.05;
+}
+
+.header:hover > h2 {
+  opacity: 0.01;
+}
+
+.footer {
+  background-color: #775144;
+  color: #ffffff;
+  padding: 30px;
+}
+
+.footer h2 {
+  color: #fff;
+}
+
+.footer a {
+  color: #291c0e;
+  text-decoration: none;
+}
+
+/* div e sections de cada seção */
+
+.filosofia,
+.matematica,
+.ciencias,
+.documentario {
+  padding: 60px;
+  margin: 80px;
+  transition: 0.5s;
+}
+
+.filosofia h1,
+.matematica h1,
+.ciencias h1,
+.documentario h1 {
+  color: #142e5a;
+  border-bottom: 2px solid #142e5a;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.filosofia:hover,
+.matematica:hover,
+.ciencias:hover,
+.documentario:hover {
+  background-image: linear-gradient(210deg, #cb904d, #c2833c);
+  border-radius: 4px;
+  box-shadow: 0px 4px 16px #ac7333;
+  scale: 1.01;
+}
+
+/* Iframe */
+
+.documentario {
+  display: grid;
+  place-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.documentario h1 {
+  font-size: 40px;
+  color: #142e5a;
+  border-bottom: 2px solid #142e5a;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.video {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.video iframe {
+  border-radius: 10px;
+  box-shadow: 1px 3px 16px #000000c4;
+}
+
+.video ul {
+  list-style: none;
+}
+
+/* nav */
+
+.menu {
+  text-align: center;
+}
+
+.menu a {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Tema escuro */
+.tema-escuro main {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+
+}
+
+.tema-escuro main:hover {
+  background-color: #1a1a1a;
+}
+
+.tema-escuro .filosofia:hover,
+.tema-escuro .matematica:hover,
+.tema-escuro .ciencias:hover,
+.tema-escuro .documentario:hover {
+  background-image: linear-gradient(210deg, #2e2e2e, #1f1f1f);
+  box-shadow: 0px 4px 20px #ffffff8c;;
+}
+
+.tema-escuro .header,
+.tema-escuro .footer {
+  background-color: #333;
+  color: #ddd;
+}
+
+.tema-escuro .menu {
+  background-image: none;
+  background-color: #222;
+  border-color: #444;
+}
+
+.tema-escuro nav a.botao {
+  background-color: #444;
+  color: #fff;
+}
+
+.tema-escuro main a {
+  color: #2140ca;
+}
+
+.tema-escuro footer a {
+  color: #a09f9f;
+}
